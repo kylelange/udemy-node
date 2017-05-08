@@ -42,3 +42,23 @@ greeter2.on('greet', function(data) {
 });
 
 greeter2.greet('**DATA HERE**');
+
+// ES6 example using class and extends
+//
+// const EventEmitter = require('events');
+//
+// class MyStream extends EventEmitter {
+//   constructor() {
+//     super();
+//   }
+//   write(data) {
+//     this.emit('data', data);
+//   }
+// }
+//
+// const stream = new MyStream();
+//
+// stream.on('data', (data) => {
+//   console.log(`Received data: "${data}"`);
+// });
+// stream.write('With ES6');
