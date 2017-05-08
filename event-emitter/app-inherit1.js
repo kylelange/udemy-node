@@ -11,6 +11,7 @@ function Greetr() {
 /*this is what connect the Greetr object to the EventEmitter object with .inherits(1,super1)
 NOTE: it MUST be a Constructor.  Now Greeter can have all the functionality
 of the Event Emitter js in node*/
+
 util.inherits(Greetr, EventEmitter);
 
 Greetr.prototype.greet = function() {
