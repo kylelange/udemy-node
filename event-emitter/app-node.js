@@ -23,6 +23,7 @@ emtrDone.on('test',() => {
   console.log('I lied.  Here is an ES6 hello.');
 });
 
+//CAUTION!  Magic strings (below) are not the best code option - hard to debug
 console.log('Hello');
 emtr.emit('greet');
 emtr.emit('done');
