@@ -2,12 +2,31 @@
 const extraGreet = require('./greet.js');
 const greet = require('./greet/index.js');
 const greetOver = require('./greet-override.js');
+const greetConst = require('./greet3.js');
 
-//two variations of the same structure 
+//Revealing Module Pattern : VERY common
+const greetCommon = require('./greet-common.js').greet;
+greetCommon();
+
+//two variations of the same structure
 const greet2 = require('./greet2.js');
 const greetTwo = require('./greet2.js').greet;
 greet2.greet();
 greetTwo();
+
+//can't copy objects, so the information will change both calls as they cascade
+greetConst.greet();
+greetConst.greeting = 'Changed constructor Hello'
+const greetConst2 = require('./greet3.js');
+greetConst2.greet();
+//below module will now have the new information.
+greetConst.greet();
+
+//this greet4 calls the new Constructor in this file, here.
+// const Greet4 = require('./greet4.js');
+// const grtr = new Greet4();
+// grtr.greet();
+
 
 greetOver();
 greet.english();
