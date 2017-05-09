@@ -19,3 +19,5 @@ readable.on('data', function(chunk) {
 });
 
 //I wonder what the default size of the buffer is?  Default: 64kb
+/*want to reduce the memory it takes to run your app/use your app:
+adjust the chunk/buffer size with highWaterMark.*/
